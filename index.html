@@ -124,9 +124,24 @@
                         <h3 class="text-xl font-semibold mb-2 text-gray-900">FRPFILE Remove Screen Time & Bypass iCloud Open Menu (NOT FMI OFF)</h3>
                         <p class="text-gray-500 mb-6 text-sm">Ẩn tài khoản iCloud <br>Xóa mã giới hạn <br>Chặn update ota <br>Fake reset. <br>Hổ trợ ios 17.0 - 26.1</p>
                     </div>
-                    <a href="https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA" target="_blank" class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-200">
+                    <a href="https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA/file/vEkySRha" 
+                       onclick="checkPass(event)" 
+                       class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition duration-200">
                         Tải Về (Windows)
                     </a>
+                    
+                    <script>
+                    function checkPass(e) {
+                        e.preventDefault(); // chặn mở link
+                        const pass = prompt('Nhập mật khẩu để tải:');
+                        
+                        if(pass === '123456') { 
+                            window.open('https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA/file/vEkySRha', '_blank');
+                        } else if(pass !== null) {
+                            alert('Sai mật khẩu!');
+                        }
+                    }
+                    </script>
                 </div>
             </div>
             
