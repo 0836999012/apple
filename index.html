@@ -130,7 +130,7 @@
             Tải Về (Windows)
         </a>
     </div>
-        <!-- Card 5 -->
+       <!-- Card 5 -->
     <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
         <div>
             <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
@@ -141,10 +141,23 @@
         </div>
         <a href="#" onclick="checkPass4(event)"
            class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
+            Tải Về ( Windows)
         </a>
     </div>
-
+   <!-- Card 6 -->
+    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
+        <div>
+            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
+               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">UNITOOL A12+</h3>
+            <p class="text-gray-500 mb-6 text-sm">Hide iCloud Account <br>Remove screentime passcode <br>Fake reset <br>Bloakc OTA. <br>Bypass A12+ </p>
+        </div>
+        <a href="#" onclick="checkPass5(event)"
+           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+            Tải Về ( Windows)
+        </a>
+    </div>
 </div>
 
 <!-- --- JAVASCRIPT --- -->
@@ -184,6 +197,29 @@ function checkPass3(e) {
     const pass = prompt('Nhập mật khẩu để tải:');
     if (pass === 'T@mpro210394') {
         window.open('https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf', '_blank');
+    } else if (pass !== null) {
+        alert('Sai mật khẩu!');
+    }
+}
+
+ function checkPass5(e) {
+   e.preventDefault();
+    const pass = prompt('Nhập mật khẩu để tải:');
+
+    if (pass === 'T@mpro210394') {
+        // Hỏi chọn hệ điều hành
+        const choice = prompt("Chọn phiên bản để tải:\n1 = Windows\n2 = macOS");
+
+        if (choice === "1") {
+            window.open('https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA', '_blank');
+        } 
+        else if (choice === "2") {
+            window.open('https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg', '_blank'); // đặt link macOS ở đây
+        } 
+        else {
+            alert("Lựa chọn không hợp lệ!");
+        }
+
     } else if (pass !== null) {
         alert('Sai mật khẩu!');
     }
