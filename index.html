@@ -158,6 +158,20 @@
             Tải Về (Windows/MacOS)
         </a>
     </div>
+      <!-- Card 7 -->
+    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
+        <div>
+            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
+               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">USBPatcher A5 - A11</h3>
+            <p class="text-gray-500 mb-6 text-sm">Bypass Hello <br>Jaibrak <br>MDM <br>Change SN. <br>Ramdisk </p>
+        </div>
+        <a href="#" onclick="checkPass6(event)"
+           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+            Tải Về (MacOS)
+        </a>
+    </div>
 </div>
 
 <!-- --- JAVASCRIPT --- -->
@@ -341,6 +355,15 @@ function checkPass3(e) {
             alert("Sai mật khẩu!");
         }
     };
+}
+    function checkPass6(e) {
+    e.preventDefault();
+    const pass = prompt('Nhập mật khẩu để tải:');
+    if (pass === 'T@mpro210394') {
+        window.open('https://mega.nz/folder/M291gKIb#Thu-4sOoIWbVv9aAaDFBew', '_blank');
+    } else if (pass !== null) {
+        alert('Sai mật khẩu!');
+    }
 }
 </script>
 
