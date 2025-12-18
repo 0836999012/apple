@@ -3,420 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSof Mobile & PC</title>
-    <!-- Tải Tailwind CSS để có phong cách thiết kế hiện đại, sạch sẽ -->
+    <title>TSoft Mobile & PC - Uy Tín & Chất Lượng</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Thiết lập font Inter cho toàn bộ trang và chế độ smooth scrolling */
         body {
-            font-family: "Segoe UI", sans-serif;
-            background-color: #f5f5f7; /* Màu nền nhẹ nhàng, giống Apple */
-            color: #1d1d1f; /* Màu chữ đen đậm */
+            font-family: 'Inter', "Segoe UI", sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            scroll-behavior: smooth;
         }
-        /* Hiệu ứng gradient subtle cho thanh điều hướng hoặc footer */
         .header-gradient {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
-        /* Hiệu ứng card nổi bật khi hover */
         .software-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         .software-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
         }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <!-- Thanh Điều Hướng (Header) -->
-    <header class="header-gradient sticky top-0 z-10 border-b border-gray-200 shadow-sm">
+    <!-- Header -->
+    <header class="header-gradient sticky top-0 z-50 border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Tên thương hiệu -->
-            <a href="https://www.facebook.com/tsoft66" class="text-2xl font-semibold tracking-tight text-gray-800 flex items-center">
-              <img src="logo.jpg" class="w-6 h-6 mr-2" alt="Logo">
+            <a href="#" class="text-2xl font-bold tracking-tight text-gray-900 flex items-center group">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center mr-3 group-hover:rotate-6 transition-transform">
+                    <span class="text-white text-xl">TS</span>
+                </div>
                 TSoft Mobile & PC
             </a>
-            <!-- Các liên kết điều hướng (Tùy chọn) -->
-            <nav class="hidden md:block space-x-8 text-sm font-medium">
-               <a href="https://www.mediafire.com/file/p4yst8j46yx2sht/Remote_Connection_Support_byThanhTam.rar/file" class="text-gray-600 hover:text-indigo-600" target="_blank" rel="noopener noreferrer">Phần mềm hỗ trợ</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#phan-mem" class="text-gray-600 hover:text-indigo-600 transition">Công cụ</a>
+                <a href="https://www.mediafire.com/file/p4yst8j46yx2sht/Remote_Connection_Support_byThanhTam.rar/file" 
+                   class="bg-gray-100 px-4 py-2 rounded-full text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition" 
+                   target="_blank">Hỗ trợ từ xa</a>
             </nav>
         </div>
     </header>
 
-    <!-- Phần Giới Thiệu Chính (Hero Section) -->
-    <main class="relative py-16 md:py-24 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+    <!-- Hero Section -->
+    <main class="relative h-[500px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070" 
+                 class="w-full h-full object-cover" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
+        </div>
 
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+                UY TÍN - CHẤT LƯỢNG <br><span class="text-indigo-400">BẢO HÀNH RÕ RÀNG</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Dịch vụ sửa chữa Điện thoại & Máy tính chuyên nghiệp tại Cao Lãnh. 
+                Hỗ trợ kỹ thuật phần mềm từ xa nhanh chóng, an toàn.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://zalo.me/0836999012"
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-2xl text-white bg-indigo-600 hover:bg-indigo-700 transform hover:scale-105 transition duration-300">
+                    Liên hệ Zalo ngay
+                </a>
+                <a href="#phan-mem"
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-2xl text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition duration-300">
+                    Xem Công Cụ
+                </a>
+            </div>
+        </div>
+    </main>
 
-    <!-- Lớp làm mờ + tối nền -->
-    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-
-    <div class="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-4">
-            UY TÍN - CHẤT LƯỢNG - BẢO HÀNH RÕ RÀNG
-        </h1>
-
-        <p class="text-xl text-gray-100 mb-10">
-            Dịch vụ sửa chữa Điện thoại & Máy tính – Nhanh, chuẩn, giá tốt.
-            Hỗ trợ linh hoạt tại cửa hàng hoặc remote từ xa.
-        </p>
-
-        <a href="https://zalo.me/0836999012"
-           class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
-            Liên hệ ngay!
-        </a>
-    </div>
-</main>
-
-
-    <!-- Phần Danh Sách Sản Phẩm (Download Links) -->
-    <section id="phan-mem" class="pb-20 md:pb-32 bg-white">
+    <!-- Software Section -->
+    <section id="phan-mem" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-10 text-center"><br>Công Cụ phổ biến</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- Card 1 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-red-100 text-red-600">
-                
-             <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Kho Phần Mềm Kỹ Thuật</h2>
+                <div class="h-1.5 w-20 bg-indigo-600 mx-auto rounded-full"></div>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">UnlockTool</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Off icloud với proxy cho iPhone/iPad Open Menu<br>- Bypass FRP android <br>- Bypass iCloud iPhone/ iPad Chip A7 - A11 <br>- Skip MDM iPhone/iPad</p>
-        </div>
-        <a href="#" onclick="checkPass1(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-blue-100 text-blue-600">
-            <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-          
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">67CafeRacer Hidden Account A12+ Pro</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Ẩn tài khoản iCloud <br>- Xóa mã giới hạn <br>- Chặn update ota <br> Fake reset.<br>- Hổ trợ ios 17+</p>
-        </div>
-        <a href="#" onclick="checkPass2(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">FRPFILE A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Hide iCloud Account <br>- Remove screentime passcode <br>- Fake reset <br>Bloakc OTA. <br>- Bypass A12+ </p>
-        </div>
-        <a href="#" onclick="checkPass3(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
-       <!-- Card 5 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">67CAFERACER A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Có thông báo <br>- Đăng nhập iCloud không proxy <br>- Appstore: Ok <br>- Fake reset <br>- IOS hổ trợ 26.0.1 - 26.1</p>
-        </div>
-        <a href="#" onclick="checkPass4(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về ( Windows)
-        </a>
-    </div>
-   <!-- Card 6 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">UNITOOL A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Hide iCloud Account <br>- Remove screentime passcode <br>- Fake reset <br>- Bloakc OTA. <br>- Bypass A12+ </p>
-        </div>
-        <a href="#" onclick="checkPass5(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows/MacOS)
-        </a>
-    </div>
-      <!-- Card 7 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">USBPatcher A5 - A11</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Bypass Hello <br>- Jaibrak <br>- MDM <br>- Change SN. <br>- Ramdisk </p>
-        </div>
-        <a href="#" onclick="checkPass6(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (MacOS)
-        </a>
-    </div>
-</div>
-
-<!-- --- JAVASCRIPT --- -->
-<script>
-function checkPass1(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://www.mediafire.com/file/m3a5vncpc85yhlf/USB_Redirector.rar/file', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-function checkPass2(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://file.unlocktool.net/', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-function checkPass3(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === 74111') {
-        window.open('https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA/file/vEkySRha', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-    function checkPass4(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
- function checkPass5(e) {
-     e.preventDefault();
-
-    // Tạo popup nhập mật khẩu
-    const popup = document.createElement('div');
-    popup.id = "passPopup";
-    popup.style.position = "fixed";
-    popup.style.top = "50%";
-    popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.padding = "20px";
-    popup.style.background = "white";
-    popup.style.borderRadius = "10px";
-    popup.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
-    popup.style.zIndex = "9999";
-    popup.style.textAlign = "center";
-
-    popup.innerHTML = `
-        <div style="display:flex; justify-content:flex-end;">
-            <button id="closePassPopup" style="
-                background:red; 
-                color:white; 
-                border:none; 
-                padding:5px 10px;
-                border-radius:5px;
-                cursor:pointer;
-            ">X</button>
-        </div>
-
-        <h3>Nhập mật khẩu để tải</h3>
-        <input id="passwordInput" type="password" placeholder="Mật khẩu..." 
-            style="
-                padding:10px;
-                width:90%;
-                margin-top:10px;
-                border-radius:6px;
-                border:1px solid #ccc;
-                font-size:16px;
-            ">
-        <br>
-        <button id="confirmPass" style="
-            margin-top:15px;
-            padding:10px 20px;
-            border:none;
-            background:#0078ff;
-            color:white;
-            border-radius:6px;
-            cursor:pointer;
-            width:150px;
-        ">Xác nhận</button>
-    `;
-
-    document.body.appendChild(popup);
-
-    // Nút đóng popup
-    document.getElementById("closePassPopup").onclick = () => popup.remove();
-
-    // Khi nhấn Xác nhận mật khẩu
-    document.getElementById("confirmPass").onclick = () => {
-        const pass = document.getElementById("passwordInput").value;
-
-        if (pass === "T@mpro210394") {
-
-            // Xóa popup mật khẩu
-            popup.remove();
-
-            // Tạo popup chọn hệ điều hành
-            const popup2 = document.createElement('div');
-            popup2.id = "osPopup";
-            popup2.style.position = "fixed";
-            popup2.style.top = "50%";
-            popup2.style.left = "50%";
-            popup2.style.transform = "translate(-50%, -50%)";
-            popup2.style.padding = "20px";
-            popup2.style.background = "white";
-            popup2.style.borderRadius = "10px";
-            popup2.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
-            popup2.style.zIndex = "9999";
-            popup2.style.textAlign = "center";
-
-            popup2.innerHTML = `
-                <div style="display:flex; justify-content:flex-end;">
-                    <button id="closePopup2" style="
-                        background:red; 
-                        color:white; 
-                        border:none; 
-                        padding:5px 10px;
-                        border-radius:5px;
-                        cursor:pointer;
-                    ">X</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cardContainer">
+                <!-- Card 1 -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">UnlockTool</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Off iCloud Proxy iPhone/iPad</li>
+                        <li>• Bypass FRP Android đa dòng</li>
+                        <li>• Bypass iCloud A7 - A11</li>
+                        <li>• Skip MDM chuyên nghiệp</li>
+                    </ul>
+                    <button onclick="openPassModal('74111', 'https://www.mediafire.com/file/m3a5vncpc85yhlf/USB_Redirector.rar/file')"
+                       class="w-full text-center py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-indigo-600 transition shadow-lg">
+                        Tải Về (Windows)
+                    </button>
                 </div>
 
-                <h3>Chọn hệ điều hành để tải</h3>
+                <!-- Card 2 -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">67CafeRacer Hidden Account</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Ẩn tài khoản iCloud A12+</li>
+                        <li>• Xóa mã giới hạn / Chặn Update</li>
+                        <li>• Hỗ trợ iOS 17+ mới nhất</li>
+                        <li>• Fake Reset an toàn</li>
+                    </ul>
+                    <button onclick="openPassModal('74111', 'https://file.unlocktool.net/')"
+                       class="w-full text-center py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-indigo-600 transition shadow-lg">
+                        Tải Về (Windows)
+                    </button>
+                </div>
 
-                <button id="dlWin" style="
-                    margin-top:10px;
-                    padding:10px 20px;
-                    border:none;
-                    background:#0078ff;
-                    color:white;
-                    border-radius:6px;
-                    cursor:pointer;
-                    width:150px;
-                ">Windows</button>
+                <!-- Card 3 -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">FRPFILE A12+</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Hide iCloud Account A12+</li>
+                        <li>• Remove Screentime Passcode</li>
+                        <li>• Fake Reset & Block OTA</li>
+                        <li>• Bypass A12+ ổn định</li>
+                    </ul>
+                    <button onclick="openPassModal('74111', 'https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA/file/vEkySRha')"
+                       class="w-full text-center py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-indigo-600 transition shadow-lg">
+                        Tải Về (Windows)
+                    </button>
+                </div>
 
-                <button id="dlMac" style="
-                    margin-top:10px;
-                    margin-left:10px;
-                    padding:10px 20px;
-                    border:none;
-                    background:#333;
-                    color:white;
-                    border-radius:6px;
-                    cursor:pointer;
-                    width:150px;
-                ">macOS</button>
-            `;
+                <!-- Card 4 -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">67CAFERACER A12+ PRO</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Hỗ trợ đầy đủ thông báo</li>
+                        <li>• Đăng nhập iCloud trực tiếp</li>
+                        <li>• Appstore hoạt động 100%</li>
+                        <li>• Hỗ trợ iOS 16.0.1 - 16.1</li>
+                    </ul>
+                    <button onclick="openPassModal('74111', 'https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf')"
+                       class="w-full text-center py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-indigo-600 transition shadow-lg">
+                        Tải Về (Windows)
+                    </button>
+                </div>
 
-            document.body.appendChild(popup2);
+                <!-- Card 5 (Multi-OS) -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">UNITOOL A12+</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Hide iCloud Account / Bypass</li>
+                        <li>• Remove Screentime Passcode</li>
+                        <li>• Fake Reset & Block OTA</li>
+                        <li>• Hỗ trợ đa nền tảng</li>
+                    </ul>
+                    <button onclick="openMultiOSModal()"
+                       class="w-full text-center py-3 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg">
+                        Tải Về (Win/Mac)
+                    </button>
+                </div>
 
-            // Nút đóng
-            document.getElementById("closePopup2").onclick = () => popup2.remove();
-
-            // Link tải Windows
-            document.getElementById("dlWin").onclick = () => {
-                window.open("https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA", "_blank");
-                popup2.remove();
-            };
-
-            // Link tải macOS
-            document.getElementById("dlMac").onclick = () => {
-                window.open("https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg", "_blank");
-                popup2.remove();
-            };
-
-        } else {
-            alert("Sai mật khẩu!");
-        }
-    };
-}
-    function checkPass6(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === 'T@mpro210394') {
-        window.open('https://mega.nz/folder/M291gKIb#Thu-4sOoIWbVv9aAaDFBew', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-</script>
-
-            
+                <!-- Card 6 -->
+                <div class="software-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
+                    <div class="mb-6 w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4436/4436481.png" class="w-8 h-8" alt="icon"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">USBPatcher A5 - A11</h3>
+                    <ul class="text-gray-500 mb-8 space-y-2 text-sm flex-grow">
+                        <li>• Bypass Hello / MDM</li>
+                        <li>• Jailbreak hỗ trợ</li>
+                        <li>• Change Serial Number</li>
+                        <li>• Ramdisk chuyên sâu</li>
+                    </ul>
+                    <button onclick="openPassModal('T@mpro210394', 'https://mega.nz/folder/M291gKIb#Thu-4sOoIWbVv9aAaDFBew')"
+                       class="w-full text-center py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-indigo-600 transition shadow-lg">
+                        Tải Về (macOS)
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="ho-tro" class="border-t border-gray-200 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-            <p>&copy; 2025 TSoft Mobile & PC | Cao Lãnh - Đồng Tháp.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-gray-700">Điều khoản</a>
-                <span class="text-gray-300">|</span>
-                <a href="#" class="hover:text-gray-700">Chính sách Bảo mật</a>
-                <span class="text-gray-300">|</span>
-                <a href="mailto:support@example.com" class="hover:text-gray-700">Liên hệ Hỗ trợ</a>
+    <footer id="ho-tro" class="bg-gray-50 border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/tsoft66" target="_blank" class="text-gray-400 hover:text-blue-600 transition">Facebook</a>
+                <a href="https://zalo.me/0836999012" target="_blank" class="text-gray-400 hover:text-blue-400 transition">Zalo</a>
             </div>
+            <p class="text-gray-500 text-sm mb-4">&copy; 2025 TSoft Mobile & PC. Thiết kế chuyên nghiệp cho kỹ thuật viên.</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest font-bold">Cao Lãnh - Đồng Tháp</p>
         </div>
     </footer>
-    
-    <!-- JavaScript: Mô phỏng hành vi tải về hoặc thông báo thành công (Không dùng alert) -->
+
+    <!-- MODALS CONTAINER -->
+    <div id="modalContainer" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="modal-overlay absolute inset-0" onclick="closeModal()"></div>
+        
+        <!-- Password Modal Content -->
+        <div id="passwordModal" class="hidden relative bg-white rounded-3xl shadow-2xl p-8 w-full max-w-sm transform transition-all">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Xác thực tải về</h3>
+            <p class="text-gray-500 text-sm mb-6">Vui lòng nhập mật khẩu được cung cấp để tiếp tục tải tệp tin.</p>
+            <input type="password" id="modalInput" placeholder="Nhập mật khẩu..." 
+                   class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none mb-4">
+            <div class="flex space-x-3">
+                <button onclick="closeModal()" class="flex-1 py-3 bg-gray-100 text-gray-700 rounded-xl font-bold hover:bg-gray-200">Hủy</button>
+                <button id="modalConfirmBtn" class="flex-2 px-6 py-3 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700">Xác nhận</button>
+            </div>
+        </div>
+
+        <!-- OS Selection Modal Content -->
+        <div id="osModal" class="hidden relative bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md transform transition-all">
+            <h3 class="text-xl font-bold text-gray-900 mb-2 text-center">Chọn hệ điều hành</h3>
+            <p class="text-gray-500 text-sm mb-8 text-center">TSoft cung cấp bản cài đặt cho cả Windows và macOS.</p>
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="window.open('https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA', '_blank')" 
+                        class="flex flex-col items-center p-6 bg-blue-50 border border-blue-100 rounded-2xl hover:bg-blue-100 transition">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732230.png" class="w-12 h-12 mb-3" alt="win">
+                    <span class="font-bold text-blue-700">Windows</span>
+                </button>
+                <button onclick="window.open('https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg', '_blank')" 
+                        class="flex flex-col items-center p-6 bg-gray-50 border border-gray-100 rounded-2xl hover:bg-gray-100 transition">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2/2235.png" class="w-12 h-12 mb-3" alt="mac">
+                    <span class="font-bold text-gray-700">macOS</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION SYSTEM -->
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-[200] px-6 py-3 bg-red-600 text-white font-bold rounded-full shadow-2xl opacity-0 transition-all duration-300 pointer-events-none">
+        Mật khẩu không chính xác!
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const downloadLinks = document.querySelectorAll('a[href^="https://example.com/download"]');
+        const modalContainer = document.getElementById('modalContainer');
+        const passwordModal = document.getElementById('passwordModal');
+        const osModal = document.getElementById('osModal');
+        const modalInput = document.getElementById('modalInput');
+        const toast = document.getElementById('toast');
+
+        let currentTargetUrl = '';
+        let currentTargetPass = '';
+
+        function openPassModal(pass, url) {
+            currentTargetPass = pass;
+            currentTargetUrl = url;
             
-            downloadLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Ngăn chặn chuyển hướng thực tế (vì đây là mock link)
-                    e.preventDefault(); 
-                    
-                    // Lấy tên phần mềm từ thẻ cha
-                    const card = e.currentTarget.closest('.software-card');
-                    const softwareName = card.querySelector('h3').textContent;
-                    
-                    // Thông báo tải xuống thành công (dùng DOM manipulation thay vì alert)
-                    const messageBox = document.createElement('div');
-                    messageBox.className = 'fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-2xl opacity-0 transition-opacity duration-500';
-                    messageBox.textContent = `Bắt đầu tải xuống: ${softwareName}. Vui lòng kiểm tra thư mục tải về của bạn.`;
-                    
-                    document.body.appendChild(messageBox);
-                    
-                    // Hiển thị thông báo
-                    setTimeout(() => {
-                        messageBox.style.opacity = '1';
-                    }, 10);
-                    
-                    // Ẩn thông báo sau 4 giây
-                    setTimeout(() => {
-                        messageBox.style.opacity = '0';
-                        setTimeout(() => messageBox.remove(), 500);
-                    }, 4000);
-                });
-            });
+            modalContainer.classList.remove('hidden');
+            passwordModal.classList.remove('hidden');
+            osModal.classList.add('hidden');
+            modalInput.value = '';
+            modalInput.focus();
+
+            document.getElementById('modalConfirmBtn').onclick = function() {
+                if (modalInput.value === currentTargetPass) {
+                    window.open(currentTargetUrl, '_blank');
+                    closeModal();
+                } else {
+                    showToast('Sai mật khẩu, vui lòng thử lại!');
+                }
+            };
+        }
+
+        function openMultiOSModal() {
+            // Bước 1: Yêu cầu mật khẩu trước khi chọn OS
+            currentTargetPass = "T@mpro210394";
+            
+            modalContainer.classList.remove('hidden');
+            passwordModal.classList.remove('hidden');
+            osModal.classList.add('hidden');
+            modalInput.value = '';
+            modalInput.focus();
+
+            document.getElementById('modalConfirmBtn').onclick = function() {
+                if (modalInput.value === currentTargetPass) {
+                    // Bước 2: Chuyển sang chọn OS
+                    passwordModal.classList.add('hidden');
+                    osModal.classList.remove('hidden');
+                } else {
+                    showToast('Sai mật khẩu!');
+                }
+            };
+        }
+
+        function closeModal() {
+            modalContainer.classList.add('hidden');
+            passwordModal.classList.add('hidden');
+            osModal.classList.add('hidden');
+        }
+
+        function showToast(msg) {
+            toast.textContent = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4');
+            toast.classList.add('opacity-100', '-translate-y-2');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4');
+                toast.classList.remove('opacity-100', '-translate-y-2');
+            }, 3000);
+        }
+
+        // Hỗ trợ nhấn Enter trong ô mật khẩu
+        modalInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                document.getElementById('modalConfirmBtn').click();
+            }
         });
     </script>
 
