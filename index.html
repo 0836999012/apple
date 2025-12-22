@@ -95,14 +95,16 @@
             opacity: 0;
             transform: translateY(10px);
             pointer-events: none;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Tăng thời gian mượt hơn */
+            visibility: hidden; /* Tránh việc menu vẫn chiếm diện tích ẩn */
         }
         
         .dropdown-menu.active {
             opacity: 1;
             transform: translateY(0);
             pointer-events: auto;
-        }
+            visibility: visible;
+}
 
         .hero-bg {
             background-image: url('bg.jpg');
@@ -460,6 +462,27 @@
                 document.getElementById('modalConfirmBtn').click();
             }
         });
+        // Xử lý đóng/mở Dropdown Mẹo iOS
+const dropdownBtn = document.getElementById('dropdownBtn');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const dropdownIcon = dropdownBtn.querySelector('.dropdown-icon');
+
+dropdownBtn.addEventListener('click', (e) => {
+    // Ngăn chặn sự kiện nổi bọt để không bị đóng ngay lập tức bởi document click
+    e.stopPropagation(); 
+    
+    // Toggle class để hiển thị menu và xoay icon
+    dropdownMenu.classList.toggle('active');
+    dropdownIcon.classList.toggle('rotate');
+});
+
+// Đóng menu khi người dùng click bất kỳ đâu ngoài dropdown
+document.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target)) {
+        dropdownMenu.classList.remove('active');
+        dropdownIcon.classList.remove('rotate');
+    }
+});
     </script>
 
 </body>
